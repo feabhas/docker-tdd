@@ -1,0 +1,41 @@
+# IDE/host artifacts
+.idea/
+.DS_Store
+Thumbs.db
+.sconsign.dblite
+
+# Working areas and files
+dist/
+build/
+out/
+*.log
+*.d
+TEST*.xml
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.su
+*.py[cod]
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
