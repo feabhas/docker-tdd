@@ -34,7 +34,8 @@
         "readme": "mv ../projects/cmake-host/README.md ../projects/cmake-host/README-host.md"
      },
     "postCreateCommand": {
-        "doctest": "mv ../doctest ."
+        "clang": "mv .clang-format ~",
+        "doctest": "mv ~/doctest .",
         "git": "rm -rf .git*"
     },
     
