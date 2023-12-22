@@ -22,8 +22,8 @@
     // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
     "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
 
-    "workspaceMount": "source=${localWorkspaceFolder},target=/home/feabhas/,type=bind",
-    "workspaceFolder": "/home/feabhas/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/feabhas/workspace,type=bind",
+    "workspaceFolder": "/home/feabhas/workspace",
     "remoteEnv": {
         "LOCALWSF": "${localWorkspaceFolder}",
         "CONTAINERWSF": "${containerWorkspaceFolder}"
@@ -32,8 +32,10 @@
     // Uncomment the next line to run commands after the container is created - for example installing curl.
     "onCreateCommand": {
         "readme": "mv ../projects/cmake-host/README.md ../projects/cmake-host/README-host.md"
-    },
+     },
     "postCreateCommand": {
+        "doctest": "mv ../doctest ."
+        "git": "rm -rf .git*"
     },
     
     // Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
